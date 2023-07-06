@@ -1,9 +1,11 @@
 import core
 import os
+diccCliente = {}
 def CreateData(*args):
     return core.LoadInfo("clientes.json")
 
-def MainMenu():
+def MainMenu(dataInfo : dict):
+    diccCliente = dataInfo
     os.system("clear")
     isCliRun = True
     os.system("clear")
@@ -18,7 +20,13 @@ def MainMenu():
     print("5. Regresar menu principal")
     opcion =int(input(":)_"))
     if (opcion == 1):
-        pass
+        data = {
+            "id":input("ingresa el Id del cliente"),
+            "nombre":input("ingresa el nombre del cliente"),
+            "email":input("ingresa el email del cliente")
+        }
+        diccCliente["data"].append(data)
+        core.crearInfo("clientes.json",diccCliente)
     elif (opcion == 2):
         pass
     elif (opcion == 3):
@@ -28,6 +36,6 @@ def MainMenu():
     elif (opcion == 5):
         isCliRun = False
     if (isCliRun):
-        MainMenu()
+        MainMenu(diccCliente)
 
     

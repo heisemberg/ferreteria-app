@@ -6,7 +6,7 @@ import productos
 import proveedores
 if __name__ == "__main__":
     isActivate = True
-    dataclientes={'data':[]}
+    dataClientes={'data':[]}
     dataproductos={'data':[]}
     dataproveedores={'data':[]}
     datacompras={'data':[]}
@@ -23,9 +23,9 @@ if __name__ == "__main__":
         print('4. Gestion de Compras ')
         print('5. Gestion de ventas ')
         print('6. Terminar: ')
-        opcion = int(input(":)_"))
+        opcion = int(input(":)_"))   
         if (opcion == 1):
-            clientes.MainMenu()
+            clientes.MainMenu(dataClientes)
         elif (opcion == 2):
             productos.MainMenu()
         elif (opcion == 3):
