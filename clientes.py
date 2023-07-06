@@ -8,13 +8,14 @@ def MainMenu():
     isCliRun = True
     os.system("clear")
     print('+','-'*55,'+')
-    print("|{:^50}{}{:^30}|".format(' ','ADMINISTRACION DE CLIENTES',' '))
+    print("|{:^16}{}{:^15}|".format(' ','ADMINISTRACION DE CLIENTES',' '))
     print('+','-'*55,'+')
 
     print("1. Crear cliente")
     print("2. Buscar cliente")
     print("3. Editar cliente")
-    print("4. Regresar menu principal")
+    print("4. Eliminar cliente")
+    print("5. Regresar menu principal")
     opcion =int(input(":)_"))
     if (opcion == 1):
         pass
@@ -23,6 +24,8 @@ def MainMenu():
     elif (opcion == 3):
         pass
     elif (opcion == 4):
+        pass
+    elif (opcion == 5):
         isCliRun = False
     if (isCliRun):
         MainMenu()
